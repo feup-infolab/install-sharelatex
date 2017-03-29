@@ -44,4 +44,5 @@ docker run -d -P -p $PORT:80 -v /var/sharelatex_data:/var/lib/sharelatex --env S
 docker exec sharelatex /bin/bash -c "cd /var/www/sharelatex/; grunt user:create-admin --email $SHARELATEX_ADMIN_EMAIL" &&  echo "Installed sharelatex" || echo "Failed to install the sharelatex container"
 
 #install some extra packages (float, etc..)
+ docker exec sharelatex /bin/bash -c "sudo apt-get update"
  docker exec sharelatex /bin/bash -c "sudo apt-get -y install texlive-generic-extra"
