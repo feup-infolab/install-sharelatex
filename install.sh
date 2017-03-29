@@ -46,3 +46,4 @@ docker exec sharelatex /bin/bash -c "cd /var/www/sharelatex/; grunt user:create-
 #install some extra packages (float, etc..)
  docker exec sharelatex /bin/bash -c "sudo apt-get update"
  docker exec sharelatex /bin/bash -c "sudo apt-get -y install texlive-generic-extra"
+ docker exec sharelatex /bin/bash -c "sudo apt-get -y install texlive-full"
